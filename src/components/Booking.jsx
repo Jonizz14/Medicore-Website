@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Booking.css'
 
 const Booking = ({ doctors, bookings, saveBooking, deleteBooking, showModal, selectedDoctor, setSelectedDoctor }) => {
   const [formData, setFormData] = useState({
@@ -14,8 +15,9 @@ const Booking = ({ doctors, bookings, saveBooking, deleteBooking, showModal, sel
 
   useEffect(() => {
     if (selectedDoctor) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData(prev => ({ ...prev, doctor: selectedDoctor }));
-      setSelectedDoctor(''); 
+      setSelectedDoctor(''); // Reset after setting
     }
   }, [selectedDoctor, setSelectedDoctor]);
 
