@@ -19,7 +19,6 @@ body {
   margin: 0;
 }
 
-/* Utility Classes */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -551,7 +550,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Component Specific Styles */
 .main-header {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(6px);
@@ -590,7 +588,6 @@ body {
   }
 }
 
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -610,7 +607,6 @@ body {
   position: relative;
 }
 
-/* Form Styles */
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -625,7 +621,6 @@ body {
   box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.1);
 }
 
-/* Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -671,7 +666,6 @@ body {
   color: #0ea5a4;
 }
 
-/* Responsive Design */
 @media (min-width: 640px) {
   .sm\\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
