@@ -1,0 +1,173 @@
+/* Asosiy Sozlamalar va Animatsiyalar */
+:root {
+  --color-primary: #10b981; /* Birlamchi yashil rang */
+  --color-gray-500: #6b7280;
+  --color-gray-200: #e5e7eb;
+}
+
+/* -------------------------------------- */
+/* 1. Header tuzilishi */
+/* -------------------------------------- */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header__container {
+  max-width: 1280px; /* Misol uchun, maksimal kenglik */
+  margin: 0 auto;
+  padding: 1rem 1.5rem; /* py-4 va px-6 o'rniga */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Scroll effektlari */
+.header--glass {
+  /* Tailwind'dagi 'glass' effektiga taqlid */
+  background-color: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(5px);
+}
+
+.header--scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------- */
+/* 2. Logotip uslubi */
+/* -------------------------------------- */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo__image {
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  border-radius: 0.75rem; /* rounded-xl */
+  object-fit: cover;
+}
+
+.logo__title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  /* font-display uchun maxsus shriftni belgilang */
+}
+
+.logo__subtitle {
+  font-size: 0.75rem; /* text-xs */
+  color: var(--color-gray-500);
+}
+
+/* -------------------------------------- */
+/* 3. Desktop Navigatsiyasi */
+/* -------------------------------------- */
+
+.nav__desktop {
+  display: none; /* Standart holatda yashirish */
+  align-items: center;
+  gap: 1.5rem; /* gap-6 */
+}
+
+/* faqat katta ekranlarda ko'rsatish (md:flex) */
+@media (min-width: 768px) {
+  .nav__desktop {
+    display: flex;
+  }
+}
+
+.nav__link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--color-primary); /* hover:text-primary */
+}
+
+/* Book Now tugmasi */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid var(--color-primary);
+}
+
+.nav__book-btn {
+    margin-left: 0.5rem; /* ml-2 */
+}
+
+.nav__book-btn:hover {
+  transform: scale(1.02); /* hover-scale-102 */
+}
+
+/* -------------------------------------- */
+/* 4. Mobil Navigatsiyasi */
+/* -------------------------------------- */
+
+.nav__toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle-btn .icon {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+/* faqat kichik ekranlarda ko'rsatish (md:hidden) */
+@media (min-width: 768px) {
+  .nav__toggle-btn {
+    display: none;
+  }
+}
+
+.nav__mobile-menu {
+  /* Bu qism JS/React orqali shartli ravishda ko'rsatiladi */
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+@media (min-width: 768px) {
+  .nav__mobile-menu {
+    display: none;
+  }
+}
+
+.nav__mobile-links {
+  padding: 1rem 1.5rem; /* px-6 py-4 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.nav__mobile-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0; /* py-2 */
+  color: inherit;
+}
