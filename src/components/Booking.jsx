@@ -15,7 +15,6 @@ const Booking = ({ doctors, bookings, saveBooking, deleteBooking, showModal, sel
 
   useEffect(() => {
     if (selectedDoctor) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData(prev => ({ ...prev, doctor: selectedDoctor }));
       setSelectedDoctor(''); // Reset after setting
     }
